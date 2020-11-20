@@ -1,0 +1,103 @@
+</div>
+<!-- Footer -->
+<div class="footer section">
+    <div class="footerSections">
+        <div class="footerSection">
+            <div class="footerSecTitle">
+                About Us
+            </div>
+
+            <div class="footerSecBody">
+                <p>Lorem ipsum dolor sit amet <br>
+                    consectetur adipisicing <br>
+                    elit. Error dignissimos<br>
+                    eveniet maxime, dolore<br>
+                    eos suscipit optio numquam</p>
+            </div>
+        </div>
+        <div class="footerSection">
+            <div class="footerSecTitle">
+                Contact us
+            </div>
+
+            <div class="footerSecBody">
+                <p>Lorem ipsum dolor sit amet <br>
+                    consectetur adipisicing <br>
+                    elit. Error dignissimos<br>
+                    eveniet maxime, dolore<br>
+                    eos suscipit optio numquam</p>
+            </div>
+        </div>
+        <div class="footerSection">
+            <div class="footerSecTitle">
+                How to purchase?
+            </div>
+
+            <div class="footerSecBody">
+                <p>Lorem ipsum dolor sit amet <br>
+                    consectetur adipisicing <br>
+                    elit. Error dignissimos<br>
+                    eveniet maxime, dolore<br>
+                    eos suscipit optio numquam</p>
+            </div>
+        </div>
+        <div class="footerSection">
+            <div class="footerSecTitle">
+                Join our team
+            </div>
+
+            <div class="footerSecBody">
+                <p>Lorem ipsum dolor sit amet <br>
+                    consectetur adipisicing <br>
+                    elit.<br>
+                </p>
+                <div class="discordLogo">
+                    <a href="https://discord.gg/sY8JFne" target="_new">
+                        <img src="/images/icons8-discord-new-logo-48.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerTitle">
+        <img class="footerLogo" src="/images/NewLogo_web.png" />
+        <div class="footerTitleText">
+            Part of the Shadow Templar Organization
+        </div>
+    </div>
+    <div class="footerBottom">
+        Conditions of Use & SalePrivacy NoticeCookies NoticeInterest© 2020-2020
+    </div>
+</div>
+</div>
+<!-- Footer End -->
+<script>
+    var productDB = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        remote: {
+            url: '/api/productSearch?q=%QUERY%',
+            wildcard: '%QUERY%'
+        }
+    });
+    $("#productSearch").typeahead({
+        minLength: 2,
+        highlight: true
+    },
+        {
+            display: 'title',
+            name: 'products',
+            source: productDB,
+            templates: {
+                empty: [
+                    '<div class="empty-message">',
+                    'Unable to find products.',
+                    '</div>'
+                ].join('\n'),
+                suggestion: Handlebars.compile('<div><img src="/product_images/{{image}}" />{{title}}</div>')
+            }
+        });
+</script>
+</body>
+
+</html>

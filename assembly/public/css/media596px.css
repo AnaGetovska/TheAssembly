@@ -1,0 +1,140 @@
+/* home media XS */
+@media (max-width: 596px){
+    .topImg{
+        margin: 0em;
+    }
+    .top{
+        margin-bottom: 2vh;
+    }
+    #newArrivals {
+        padding: 0vh;
+    }
+    .secondaryFeatured {
+        flex-direction: column;
+    }
+    }
+/* home media XS End */
+/* myCart media XS Start */
+@media (max-width: 596px) {
+    #header {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 2vh;
+    }
+
+    #logo {
+        margin: 2vh 0vh;
+    }
+
+    #search {
+        order: 1;
+        margin: 1vh 0vh;
+    }
+
+    #allProducts > div {
+        display: none;
+    }
+
+    #allProducts > img {
+        align-items: center;
+    }
+
+    #headerButtons {
+        margin: 1vh 0vh;
+    }
+
+    .productQuantityWrapCart {
+        margin-top: 0.5vh;
+    }
+    .productDetailsCart {
+       
+        justify-content: space-around;
+    }
+    .myCartTitle {
+        font-size: 3vh;
+    }
+
+    .myCartSecondTitle {
+        font-size: 2vh;
+    }
+
+    .myCartBody {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .myCartOrder {
+        order: -1;
+        margin-top: 3vh;
+        background-color: var(--primary);
+        width: 100%;
+    }
+
+    .myCartOrderBlock {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0vh;
+    }
+
+    .shippingDetailsCart {
+        padding-bottom: 1vh;
+    }
+
+    .cartOrderMain {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .orderButtonCart {
+        font-size: 4.5vh;
+        margin: 0vh 1.5vh;
+        text-align: center;
+    }
+
+    .cartOrderBottom {
+        align-self: center;
+        font-size: 3.5vh;
+    }
+
+    .myCartProducts {
+        width: 100%;
+        height: 100%;
+        margin-right: 0;
+        justify-content: center;
+        padding-bottom: 2vh;
+    }
+
+    .productContainerCart {
+        justify-content: center;
+        width: 50vh;
+    }
+
+    .productBottomCart {
+        align-self: flex-end;
+    }
+
+    .productInfoCart {
+        display: none;
+    }
+
+    .productImageCart {
+        margin-right: 6vh;
+    }
+
+    .myCartOrderMoreInfo {
+        width: 90%;
+        margin: 3vh 3vh;
+        background-color: var(--primary);
+        font-size: 1.7vh;
+        font-weight: 600;
+        color: var(--secondary);
+        border-radius: 0px;
+    }
+
+    .productMainBodyCart {
+        border: none;
+    }
+}
+    /* myCart media XS End */
