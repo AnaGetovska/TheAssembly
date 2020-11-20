@@ -20,4 +20,4 @@ deploy:
   rules:
     - if: '$CI_COMMIT_BRANCH == "production"'
   script:
-    - docker service update --image "$REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME" "$SWARM_SERVICE_NAME" --detach 
+    - docker service update --image "$REGISTRY/anya/$CI_PROJECT_NAME" "$SWARM_SERVICE_NAME" --detach 
