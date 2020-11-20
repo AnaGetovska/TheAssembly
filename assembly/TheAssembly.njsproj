@@ -57,7 +57,6 @@
     <Content Include="routes\pages.js" />
     <Content Include="server.js" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
     <Content Include="views\admin\add_category.ejs" />
     <Content Include="views\admin\edit_product.ejs" />
     <Content Include="views\admin\add_product.ejs" />

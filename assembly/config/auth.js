@@ -2,18 +2,16 @@ exports.isUser = function (req, res, next) {
     if (req.isAuthenticated()) {
         next();
     } else {
-        req.flash('danger', 'Please log in');
-        res.redirect('/users/login');
+        res.redirect('/);
     }
 
 }
 
 exports.isAdmin = function (req, res, next) {
-    if (req.isAuthenticated()) {
+    if (req.isAuthenticated() && req.user.admin === true) {
         next();
     } else {
-        req.flash('danger', 'Please log in as Admin');
-        res.redirect('/users/login');
+        res.redirect('/');
     }
 
 }
