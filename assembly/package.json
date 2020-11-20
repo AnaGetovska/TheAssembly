@@ -6,6 +6,9 @@
   "author": {
     "name": "Munnimun"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.2",

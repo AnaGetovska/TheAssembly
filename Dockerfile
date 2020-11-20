@@ -4,4 +4,4 @@ COPY assembly/package*.json ./
 RUN npm install
 COPY ./assembly .
 EXPOSE 3000
-CMD [ "node", "assembly/server.js" ]
+CMD [ "npm", "start" ]
