@@ -92,7 +92,6 @@ router.post('/add-product', isAdmin, function (req, res) {
     } else {
         Product.findOne({ Slug: slug }, function (err, product) {
             if (product) {
-                req.flash('danger', 'Product title exists, choose another.');
                 Category.find(function (err, cats) {
                     res.render('admin/add_product', {
                         title: title,
@@ -129,9 +128,11 @@ router.post('/add-product', isAdmin, function (req, res) {
                     });
 
                     if (imageFile != "") {
+                        console.log('moving image');
                         var productImage = req.files.image;
+                        console.log(productImage);
                         var path = imagesDir + product._id + '/' + imageFile;
-
+                        console.log(productImage.tempFilePath);
                         productImage.mv(path, function (err) {
                             return console.log(err);
                         });
