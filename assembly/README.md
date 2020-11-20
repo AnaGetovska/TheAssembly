@@ -1,3 +1,6 @@
-# csmcard1
-
-
+# The Assembly
+Env vars:
+- DISCORD_SECRET
+- DISCORD_CLIENTID
+- DISCORD_CALLBACKURL
+- DB_HOST
