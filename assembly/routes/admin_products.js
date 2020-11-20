@@ -115,19 +115,19 @@ router.post('/add-product', isAdmin, function (req, res) {
                     if (err) {
                         return console.log(err);
                     }
-                    mkdirp(__dirname + 'public/product_images/' + product._id, function (err) {
+                    mkdirp(__dirname + '/public/product_images/' + product._id, function (err) {
                         return console.log(err);
                     });
-                    mkdirp(__dirname + 'public/product_images/' + product._id + '/gallery', function (err) {
+                    mkdirp(__dirname + '/public/product_images/' + product._id + '/gallery', function (err) {
                         return console.log(err);
                     });
-                    mkdirp(__dirname + 'public/product_images/' + product._id + '/gallery/thumbs', function (err) {
+                    mkdirp(__dirname + '/public/product_images/' + product._id + '/gallery/thumbs', function (err) {
                         return console.log(err);
                     });
 
                     if (imageFile != "") {
                         var productImage = req.files.image;
-                        var path = __dirname + 'public/product_images/' + product._id + '/' + imageFile;
+                        var path = __dirname + '/public/product_images/' + product._id + '/' + imageFile;
 
                         productImage.mv(path, function (err) {
                             return console.log(err);
@@ -163,7 +163,7 @@ router.get('/edit-product/:id', isAdmin, function (req, res) {
                 console.log(err);
                 res.redirect('/admin/products');
             } else {
-                var galleryDir = 'public/product_images/' + p._id + '/gallery';
+                var galleryDir = '/public/product_images/' + p._id + '/gallery';
                 var galleryImages = null;
 
                 fs.readdir(galleryDir, function (err, files) {
