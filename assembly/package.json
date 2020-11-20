@@ -1,13 +1,12 @@
 {
-  "name": "csmcart1",
-  "version": "0.0.0",
-  "description": "csmcart1",
+  "name": "the-assembly",
+  "version": "0.0.1",
+  "description": "The Assembly Web Shop",
   "main": "server.js",
   "author": {
-    "name": ""
+    "name": "Munnimun"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.2",
     "connect-flash": "^0.1.1",
@@ -21,13 +20,13 @@
     "lodash": "^4.17.20",
     "mkdirp": "0.5.1",
     "mongoose": "^5.10.7",
-    "nodemon": "^2.0.6",
     "passport": "^0.4.1",
     "passport-discord": "^0.1.4",
     "passport-local": "^1.0.0",
     "resize-img": "^2.0.0"
   },
   "devDependencies": {
-    "ejs-lint": "^1.1.0"
+    "ejs-lint": "^1.1.0",
+    "nodemon": "^2.0.6"
   }
 }
