@@ -1,3 +1,3 @@
 module.exports = {
-    database: 'mongodb://localhost/csmcart1'
+    database: process.env.DB_HOST || 'mongodb://localhost/csmcart1'
 }

@@ -127,9 +127,9 @@ var DiscordStrategy = require('passport-discord').Strategy;
 var scopes = ['identify', 'email', 'guilds', 'guilds.join'];
 
 passport.use(new DiscordStrategy({
-    clientID: '776862418047074334',
-    clientSecret: 'cm6Jl2jtQsJBBmzK8A4ttBqz_zAcqIPE',
-    callbackURL: 'http://localhost:3000/auth/discord/callback',
+    clientID: process.env.DISCORD_SECRET,
+    clientSecret: process.env.DISCORD_CLIENTID,
+    callbackURL: process.env.DISCORD_CALLBACKURL,
     scope: scopes
 }, async (accessToken, refreshToken, profile, cb) => {
         let u = await User.findOne({ discordId: profile.id });
