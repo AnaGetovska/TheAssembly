@@ -53,7 +53,7 @@ router.get('/add-product', isAdmin, function (req, res) {
 /*
  * POST add product
  */
-router.post('/add-product', function (req, res) {
+router.post('/add-product', isAdmin, function (req, res) {
     var imageFile;
     if (req.files == null) {
         imageFile = "";
@@ -197,7 +197,7 @@ router.get('/edit-product/:id', isAdmin, function (req, res) {
 /*
  * POST edit product
  */
-router.post('/edit-product/:id', function (req, res) {
+router.post('/edit-product/:id', isAdmin, function (req, res) {
     var imageFile;
     if (req.files == null) {
         imageFile = "";
@@ -279,7 +279,7 @@ router.post('/edit-product/:id', function (req, res) {
  * POST product gallery
  */
 
-router.post('/product-gallery/:id', function (req, res) {
+router.post('/product-gallery/:id', isAdmin, function (req, res) {
     var productImage = req.files.file;
     var id = req.params.id;
     var path = 'public/product_images/' + id + '/gallery/' + req.files.file.name;

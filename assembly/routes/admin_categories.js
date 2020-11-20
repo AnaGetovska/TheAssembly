@@ -35,7 +35,7 @@ router.get('/add-category', isAdmin, function (req, res) {
 /*
  * POST add category
  */
-router.post('/add-category', function (req, res) {
+router.post('/add-category', isAdmin, function (req, res) {
     req.checkBody('title', 'Title must have a value.').notEmpty();
 
     var title = req.body.title;
@@ -107,7 +107,7 @@ router.get('/edit-category/:id', isAdmin, function (req, res) {
 /*
  * POST edit category
  */
-router.post('/edit-category/:id', function (req, res) {
+router.post('/edit-category/:id', isAdmin, function (req, res) {
     req.checkBody('title', 'Title must have a value.').notEmpty();
 
     var title = req.body.title;

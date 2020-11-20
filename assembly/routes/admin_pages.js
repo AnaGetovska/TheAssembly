@@ -38,7 +38,7 @@ router.get('/add-page', isAdmin, function (req, res) {
 /*
  * POST add page
  */
-router.post('/add-page', function (req, res) {
+router.post('/add-page', isAdmin, function (req, res) {
     req.checkBody('title', 'Title must have a value.').notEmpty();
     req.checkBody('content', 'Content must have a value.').notEmpty();
 
@@ -126,7 +126,7 @@ function sortPages(ids, callback) {
  * POST reorder pages
  */
 
-router.post('/reorder-pages', function (req, res) {
+router.post('/reorder-pages', isAdmin, function (req, res) {
     var ids = req.body['id[]'];
 
     sortPages(ids, function () {
@@ -169,7 +169,7 @@ router.get('/edit-page/:id', isAdmin, function (req, res) {
 /*
  * POST edit page
  */
-router.post('/edit-page/:id', function (req, res) {
+router.post('/edit-page/:id', isAdmin, function (req, res) {
     req.checkBody('title', 'Title must have a value.').notEmpty();
     req.checkBody('content', 'Content must have a value.').notEmpty();
 
