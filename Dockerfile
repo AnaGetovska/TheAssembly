@@ -1,6 +1,6 @@
 FROM node:12
-WORKDIR /assembly
-COPY package*.json ./
+WORKDIR /usr/src/app
+COPY assembly/package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
