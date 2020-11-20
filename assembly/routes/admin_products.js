@@ -252,13 +252,13 @@ router.post('/edit-product/:id', isAdmin, function (req, res) {
 
                         if (imageFile != "") {
                             if (pimage != "") {
-                                fs.remove(__dirname + 'public/product_images/' + id + '/' + pimage, function (err) {
+                                fs.remove(__dirname + '/public/product_images/' + id + '/' + pimage, function (err) {
                                     if (err)
                                         console.log(err);
                                 });
                             }
                             var productImage = req.files.image;
-                            var path = __dirname + 'public/product_images/' + id + '/' + imageFile;
+                            var path = __dirname + '/public/product_images/' + id + '/' + imageFile;
 
                             productImage.mv(path, function (err) {
                                 return console.log(err);
@@ -282,8 +282,8 @@ router.post('/edit-product/:id', isAdmin, function (req, res) {
 router.post('/product-gallery/:id', isAdmin, function (req, res) {
     var productImage = req.files.file;
     var id = req.params.id;
-    var path = 'public/product_images/' + id + '/gallery/' + req.files.file.name;
-    var thumbsPath = 'public/product_images/' + id + '/gallery/thumbs/' + req.files.file.name;
+    var path = __dirname +'/public/product_images/' + id + '/gallery/' + req.files.file.name;
+    var thumbsPath = __dirname +'/public/product_images/' + id + '/gallery/thumbs/' + req.files.file.name;
 
     productImage.mv(path, function (err) {
         if (err)
@@ -302,8 +302,8 @@ router.post('/product-gallery/:id', isAdmin, function (req, res) {
  */
 
 router.get('/delete-image/:image', isAdmin, function (req, res) {
-    var originalImage = 'public/product_images/' + req.query.id + '/gallery/' + req.params.image;
-    var thumbImage = 'public/product_images/' + req.query.id + '/gallery/thumbs/' + req.params.image;
+    var originalImage = __dirname +'/public/product_images/' + req.query.id + '/gallery/' + req.params.image;
+    var thumbImage = __dirname +'/public/product_images/' + req.query.id + '/gallery/thumbs/' + req.params.image;
     fs.remove(originalImage, function (err) {
         if (err) {
             console.log(err);
@@ -327,7 +327,7 @@ router.get('/delete-image/:image', isAdmin, function (req, res) {
 router.get('/delete-product/:id', isAdmin, function (req, res) {
 
     var id = req.params.id;
-    var path = 'public/product_images/' + id;
+    var path = __dirname +'/public/product_images/' + id;
 
     fs.remove(path, function (err) {
         if (err) {
