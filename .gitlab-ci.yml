@@ -11,5 +11,5 @@ build:
   variables:
    GIT_SUBMODULE_STRATEGY: recursive
   script:
-   - docker build --pull -t "$REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME" .
-   - docker push "$REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME"
+   - docker build --pull -t "$REGISTRY/anya/$CI_PROJECT_NAME" .
+   - docker push "$REGISTRY/anya/$CI_PROJECT_NAME"
