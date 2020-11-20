@@ -103,10 +103,8 @@
 
 .discordAvatar {
     border-radius: 50px;
-    border: solid 2px rgb(188,195,204,0.7);
-    ;
-    width: 5.5vh;
-    height: 5.5vh;
+    border: solid 2px rgba(188,195,204,0.7);
+    height: 3.5em;
     overflow: hidden;
     position: relative;
 }
@@ -121,7 +119,7 @@
         font-weight: 500;
         text-align: center;
         color: var(--primary);
-        top: 0.65em;
+        top: 0.9em;
         left: 0;
         display: none;
     }
