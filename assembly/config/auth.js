@@ -8,7 +8,7 @@ exports.isUser = function (req, res, next) {
 }
 
 exports.isAdmin = function (req, res, next) {
-    if (req.isAuthenticated() /*&& req.user.admin === true*/) {
+    if (req.isAuthenticated() && req.user.admin === true) {
         next();
     } else {
         res.redirect('/');
