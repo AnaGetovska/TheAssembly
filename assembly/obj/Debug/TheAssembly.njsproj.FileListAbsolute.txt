@@ -1,2 +1,0 @@
-D:\Sites\TheAssembly\assembly\obj\Debug\TheAssembly.njsproj.CoreCompileInputs.cache
-D:\Sites\TheAssembly\assembly\bin\Microsoft.NodejsTools.WebRole.dll

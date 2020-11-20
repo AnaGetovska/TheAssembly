@@ -1,9 +1,0 @@
-C:\Users\aniev\source\repos\csmcard1\csmcard1\obj\Debug\csmcart1.njsprojAssemblyReference.cache
-C:\Users\aniev\source\repos\csmcard1\csmcard1\obj\Debug\csmcart1.njsproj.CoreCompileInputs.cache
-C:\Users\aniev\source\repos\csmcard1\csmcard1\bin\Microsoft.NodejsTools.WebRole.dll
-D:\Sites\My Shopping Cart Project\csmcard1\csmcard1\obj\Debug\csmcart1.njsprojAssemblyReference.cache
-D:\Sites\My Shopping Cart Project\csmcard1\csmcard1\obj\Debug\csmcart1.njsproj.CoreCompileInputs.cache
-D:\Sites\My Shopping Cart Project\csmcard1\csmcard1\bin\Microsoft.NodejsTools.WebRole.dll
-D:\Sites\My DU Web-Shop Project\csmcard1\csmcard1\obj\Debug\csmcart1.njsprojAssemblyReference.cache
-D:\Sites\My DU Web-Shop Project\csmcard1\csmcard1\obj\Debug\csmcart1.njsproj.CoreCompileInputs.cache
-D:\Sites\My DU Web-Shop Project\csmcard1\csmcard1\bin\Microsoft.NodejsTools.WebRole.dll
