@@ -12,7 +12,7 @@ var Product = require('../models/product');
 //Get Product model
 var Category = require('../models/category');
 
-var imagesDir = '/assembly/public/product_images/';/*__basedir + */
+var imagesDir = __basedir + '/public/product_images/';
 
 /*
  * GET Products index
