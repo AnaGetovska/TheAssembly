@@ -9,6 +9,8 @@ var fileUpload = require('express-fileupload');
 var passport = require('passport');
 var _ = require('lodash');
 
+global.__basedir = __dirname;
+
 //Connect to db
 mongoose.connect(config.database);
 const db = mongoose.connection;
