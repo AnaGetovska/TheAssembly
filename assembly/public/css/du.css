@@ -949,7 +949,9 @@ a, a:visited {
 }
 
 .footerSection {
-    margin: 0em 4em 0em 4em;
+    display: flex;
+    flex-direction:column;
+    margin: 0vh 2vh;
 }
 
 .footerSecTitle {
@@ -960,6 +962,10 @@ a, a:visited {
 }
 
 .footerSecBody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30vh;
     color: var(--primary);
     text-align: center;
 }
