@@ -498,7 +498,7 @@ a, a:visited {
 
 .productImageCart {
     align-self: center;
-    margin: 0vh 1.5vh;
+    margin: 1.5vh;
 }
 
     .productImageCart > img {
@@ -507,6 +507,7 @@ a, a:visited {
     }
 
 .productBodyCart {
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -546,6 +547,7 @@ a, a:visited {
     border-top: solid 0.2vh var(--secondary);
     max-height: 95%;
     width: 50%;
+    max-height: 100%;
 }
 
     .productInfoCart > p:nth-child(even) {
