@@ -115,19 +115,19 @@ router.post('/add-product', isAdmin, function (req, res) {
                     if (err) {
                         return console.log(err);
                     }
-                    mkdirp('public/product_images/' + product._id, function (err) {
+                    mkdirp(__dirname + 'public/product_images/' + product._id, function (err) {
                         return console.log(err);
                     });
-                    mkdirp('public/product_images/' + product._id + '/gallery', function (err) {
+                    mkdirp(__dirname + 'public/product_images/' + product._id + '/gallery', function (err) {
                         return console.log(err);
                     });
-                    mkdirp('public/product_images/' + product._id + '/gallery/thumbs', function (err) {
+                    mkdirp(__dirname + 'public/product_images/' + product._id + '/gallery/thumbs', function (err) {
                         return console.log(err);
                     });
 
                     if (imageFile != "") {
                         var productImage = req.files.image;
-                        var path = 'public/product_images/' + product._id + '/' + imageFile;
+                        var path = __dirname + 'public/product_images/' + product._id + '/' + imageFile;
 
                         productImage.mv(path, function (err) {
                             return console.log(err);
@@ -252,13 +252,13 @@ router.post('/edit-product/:id', isAdmin, function (req, res) {
 
                         if (imageFile != "") {
                             if (pimage != "") {
-                                fs.remove('public/product_images/' + id + '/' + pimage, function (err) {
+                                fs.remove(__dirname + 'public/product_images/' + id + '/' + pimage, function (err) {
                                     if (err)
                                         console.log(err);
                                 });
                             }
                             var productImage = req.files.image;
-                            var path = 'public/product_images/' + id + '/' + imageFile;
+                            var path = __dirname + 'public/product_images/' + id + '/' + imageFile;
 
                             productImage.mv(path, function (err) {
                                 return console.log(err);
