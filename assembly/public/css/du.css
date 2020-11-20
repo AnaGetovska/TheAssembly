@@ -626,6 +626,7 @@ a, a:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:space-around;
     background-color: var(--primary);
     width: 40vh;
     height: 27vh;
@@ -633,7 +634,7 @@ a, a:visited {
 }
 
 .cartOrderMain {
-    margin-top: 3.5vh;
+    
 }
 
 .orderDetailsCart {
@@ -669,7 +670,7 @@ a, a:visited {
     font-size: 2.4vh;
     font-weight: 600;
     padding: 0em 2.5vh;
-    margin-top: 0.8vh;
+    margin-bottom: 2vh;
 }
 
 .cartOrderBottomText {
@@ -806,6 +807,7 @@ a, a:visited {
     flex-direction: column;
     align-items: center;
     background-color: var(--secondary);
+    background-size: cover;
     background-image: url("/images/background_image.png");
 }
 /* All Categories Line */
@@ -945,7 +947,6 @@ a, a:visited {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 .footerSection {

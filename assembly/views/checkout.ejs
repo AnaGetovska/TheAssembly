@@ -23,7 +23,8 @@
                 <% cart.forEach(function (product) { %>
                 <% sum += product.price * product.quantity; %>
                 <div class="productContainerCart" id="<%= product.slug %>">
-                    <div class="productImageCart"><img src="/product_images/<%= product._id %>/<%= product.image %>" /></div>
+                    <div class="productImageCart"><img src="/product_images/<%= product._id %>/<%= product.image %>" />
+                    </div>
                     <div class="productBodyCart">
                         <div class="productMainBodyCart">
                             <div class="productDetailsCart">
@@ -35,18 +36,23 @@
                                         </div>
                                     </div>
                                     <div class="AddSubtractButtonsCart">
-                                        <a href="/cart/update/<%= product.title %>?action=add#<%= product.slug %>"><i class="fas fa-fw fa-plus"></i></a>
-                                        <a href="/cart/update/<%= product.title %>?action=remove#<%= product.slug %>"><i class="fas fa-fw fa-minus"></i></a>
+                                        <a href="/cart/update/<%= product.title %>?action=add#<%= product.slug %>"><i
+                                                class="fas fa-fw fa-plus"></i></a>
+                                        <a href="/cart/update/<%= product.title %>?action=remove#<%= product.slug %>"><i
+                                                class="fas fa-fw fa-minus"></i></a>
                                     </div>
                                     <div class="removeButtonWrapCart">
                                         <a class="removeButtonCart"
-                                            href="/cart/update/<%= product.title %>?action=clear"><i class="fas fa-fw fa-lg fa-trash"></i></a>
+                                            href="/cart/update/<%= product.title %>?action=clear"><i
+                                                class="fas fa-fw fa-lg fa-trash"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="productInfoCart"><%- product.desc %></div>
                         </div>
-                        <div class="productBottomCart"><%= parseFloat(product.quantity*product.price).toLocaleString() %> <img class="duMoneyCart" src="/images/DU_money.svg" />
+                        <div class="productBottomCart">
+                            <%= parseFloat(product.quantity*product.price).toLocaleString() %> <img class="duMoneyCart"
+                                src="/images/DU_money.svg" />
                         </div>
                     </div>
                 </div>
@@ -57,7 +63,7 @@
                     <div class="cartOrderMain">
                         <a class="button orderButtonCart">Place your order</a>
                         <div class="orderDetailsCart">
-                            <div>Items()</div>
+                            <div></div>
                             <div class="shippingDetailsCart">
                                 <div>Shipping</div>
                                 <div>Free</div>
