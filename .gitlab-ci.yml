@@ -12,6 +12,7 @@ build:
   variables:
    GIT_SUBMODULE_STRATEGY: recursive
   script:
+   - find . -type f -exec sed -i "s/CI_COMMIT_HASH/$CI_COMMIT_SHA/g" {} +
    - docker build --pull -t "$REGISTRY/anya/$CI_PROJECT_NAME" .
    - docker push "$REGISTRY/anya/$CI_PROJECT_NAME"
 
