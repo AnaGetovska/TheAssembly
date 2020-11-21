@@ -952,8 +952,9 @@ a, a:visited {
 
 .footerSection {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     margin: 0vh 2vh;
+    flex-wrap: wrap;
 }
 
 .footerSecTitle {
