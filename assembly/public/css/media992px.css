@@ -71,7 +71,7 @@
 
     .orderButtonCart {
         font-size: 5vh;
-        margin: 0vh 1.5vh;
+        margin: 2vh 1.5vh;
         text-align: center;
     }
 
@@ -89,7 +89,7 @@
 
     .productContainerCart {
         justify-content: center;
-        width: 55vh;
+        width: 80vh;
     }
 
     .productInfoCart {

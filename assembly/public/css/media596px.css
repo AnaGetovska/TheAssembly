@@ -119,7 +119,8 @@
 
     .productContainerCart {
         justify-content: center;
-        width: 50vh;
+        width: -webkit-fill-available;
+        
     }
 
     .productBottomCart {
@@ -131,7 +132,7 @@
     }
 
     .productImageCart {
-        margin-right: 6vh;
+        margin: unset;
     }
 
     .myCartOrderMoreInfo {
@@ -146,6 +147,10 @@
 
     .productMainBodyCart {
         border: none;
+    }
+    .orderButtonCart {
+        margin: 3vh 1.5vh;
+        font-size: 3.5vh;
     }
 }
     /* myCart media XS End */

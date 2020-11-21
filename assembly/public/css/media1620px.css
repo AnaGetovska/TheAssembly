@@ -48,7 +48,9 @@
         width: 100%;
         height: 100%;
     }
-
+    .cartOrderMain {
+        margin-top: 2.5vh;
+    }
     .productContainerCart {
         justify-content: center;
         width: 95vh;
