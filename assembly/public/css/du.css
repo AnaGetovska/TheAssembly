@@ -1,3 +1,8 @@
+@import "/css/media1620px.css";
+@import "/css/media1120px.css";
+@import "/css/media992px.css";
+@import "/css/media596px.css";
+
 /* Header Start Common Part */
 :root {
     --primary: #BCC3CC;
@@ -1113,7 +1118,3 @@ textarea, select, input, button {
 .twitter-typeahead {
     width: 100%;
 }
-@import url("/css/media1620px.css");
-@import url("/css/media1120px.css");
-@import url("/css/media992px.css");
-@import url("/css/media596px.css");
