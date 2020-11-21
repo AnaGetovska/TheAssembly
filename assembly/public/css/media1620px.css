@@ -84,3 +84,19 @@
     }
 }
 /* myCart media L End */
+/* Home media L start*/
+@media (max-width: 1620px) {
+    #newArrivals {
+        padding: 0em 4vh;
+        flex-direction: row;
+       
+    }
+    .arrivalWrap {
+        margin: 2em;
+    }
+    .arrivalImage {
+        margin: 3em;
+    }
+
+}
+    /* Home media L end*/

@@ -236,7 +236,7 @@ a, a:visited {
 .arrivalWrap {
     display: flex;
     flex-direction: column;
-    margin: 2em 0em;
+    margin: 2vh 2vh;
     transition: all 120ms linear;
     cursor: pointer;
 }
