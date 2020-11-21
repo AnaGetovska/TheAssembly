@@ -236,7 +236,7 @@ a, a:visited {
 .arrivalWrap {
     display: flex;
     flex-direction: column;
-    margin: 2em;
+    margin: 2em 0em;
     transition: all 120ms linear;
     cursor: pointer;
 }
@@ -977,7 +977,7 @@ a, a:visited {
 
 .footerTitle {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     padding: 0em 0em 0em 0em;

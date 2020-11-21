@@ -8,10 +8,18 @@
     .top {
         width: -webkit-fill-available;
     }
+    .arrivalImage {
+        margin: 0.4vh;
+    }
+    .arrivalWrap {
+        margin: 2em 0em:
+    }
     .secondaryFeatured {
         flex-direction: column;
     }
-    
+    .secButtonFooter {
+        padding: 1vh;
+    }
     }
 /* home media XS End */
 /* myCart media XS Start */
