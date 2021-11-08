@@ -1,0 +1,15 @@
+stages:
+  - build
+
+variables:
+  REGISTRY: 'registry.internal.st'
+  SWARM_SERVICE_NAME: 'TheAssembly1'
+
+build:
+  image: docker:latest
+  stage: build
+  variables:
+   GIT_SUBMODULE_STRATEGY: recursive
+  script:
+   - docker build --pull -t "$REGISTRY/anya/$CI_PROJECT_NAME" .
+   - docker push "$REGISTRY/anya/$CI_PROJECT_NAME"

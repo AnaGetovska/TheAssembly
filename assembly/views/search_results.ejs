@@ -1,0 +1,52 @@
+<%- include('_layouts/header'); %>
+
+<div class="categoryHero">
+    <!-- All categories Line -->
+        <div class="allCategoriesBackground section">
+            <div class="allCategoriesWrap">
+                <a href="/products" class="button category">All</a>
+                <% categories.forEach(c => { %>
+                <a href="/products/<%= c.slug %>" class="button category"><%= c.title %></a>
+                <% }) %>
+            </div>
+        </div>
+    <div class="bodyWrapContent">
+        <div class="currentCategoryBody section">
+            <% if (products.length > 0) { %>
+                <div>
+                    <h1 class="currCategoryTitle">SEARCH RESULTS </h1>
+                </div>
+                <div class="allContainers">
+                    <% products.forEach(function(p){ %>
+                    <div class="productContainer">
+                        <div class="productTitle">
+                            <%= p.title %>
+                        </div>
+                        <div class="productImages">
+                            <a href="/products/<%= p.category %>/<%= p.slug %>"><img class="productPhoto"
+                                    src="/product_images/<%= p.id %>/<%= p.image %>" alt="" /></a>
+                            <div class="productCart">
+                                <a class="productCartIcon" href="/products/<%= p.category %>/<%= p.slug %>"><img
+                                        class="productIconImageSize" src="/images/Cart Icon.svg" /></a>
+                            </div>
+                        </div>
+                        <div class="productBottom">
+                            <!-- <div class="productDetail">SIZE: XS</div> -->
+                            <div class="productPrice"><%= parseFloat(p.price).toLocaleString() %><span><img
+                                        class="productPriceLogo" src="/images/DU_money.svg" /></span>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+                </div>
+             
+            <% }else{ %>
+                <div>
+                    <h1 class="currCategoryTitle">NO RESULTS FOUND </h1>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<%- include('_layouts/footer'); %>

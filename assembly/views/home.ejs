@@ -1,0 +1,91 @@
+<%- include('_layouts/header'); %>
+
+<div id="hero" class="section">
+    <div class="headings">
+        <h1>NEW ARRIVALS</h1>
+        <h6>GET YOUR PARTS QUICKLY AND EASILY FROM OUR FACTORY</h6>
+    </div>
+    <div id="newArrivals">
+        <% arrivals.forEach(p => { %>
+        <a href="/products/<%= p.category %>/<%= p.slug %>">
+            <div class="arrivalWrap">
+                <div class="arrival">
+                    <img class="arrivalImage" src="/product_images/<%= p._id %>/<%= p.image %>" />
+                </div>
+                <div class="arrivalBottom">
+                    <div class="arrivalBottomText"><%= p.title.toUpperCase() %></div>
+                    <div class="arrivalBottomPrice"><%= parseFloat(p.price).toLocaleString()%><img
+                            src="/images/DU_money.svg" /></div>
+                </div>
+            </div>
+        </a>
+        <% }) %>
+    </div>
+
+    <div class="bestSellersMain">
+        <div>
+            <h1 class="bestSelHeading1">BEST SELLERS</h1>
+        </div>
+        <div class="bestSellers">
+            <h6 class="bestSelHeading2">THE MOST POPULAR PRODUCTS</h6>
+            <div class="bestSellersBody">
+                <% popular.forEach(p => { %>
+                <a href="/products/<%= p.category %>/<%= p.slug %>">
+                    <div class="bestSellerComponent">
+                        <img class="bestSelImg" src="/product_images/<%= p._id %>/<%= p.image %>" />
+                        <div class="button bestSelButton">MORE</div>
+                    </div>
+                </a>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Featured Categories -->
+<div id="featuredCategoriesWrap" class="section">
+    <div class="headings">
+        <h1>Featured Categories</h1>
+    </div>
+
+    <div class="topFeatured">
+        <% featured.forEach((c,i) => { %>
+        <% if (i < 2) { %>
+        <div class="top">
+            <div class="topTitle">
+                <%= c.title %>
+            </div>
+            <div class="button featuredButton">
+                <a href="/products/<%= c.slug %>">
+                    VIEW ALL
+                </a>
+            </div>
+            <div class="topImgs">
+                <img class="topImg" src="/images/categoriesImages/<%= c.image %>" />
+            </div>
+        </div>
+        <% } %>
+        <% }) %>
+    </div>
+    <div class="secondaryFeatured section">
+        <% featured.forEach((c,i) => { %>
+        <% if (i >= 2){ %>
+        <div class="secondary">
+            <div class="secondaryTitle"><%= c.title.toUpperCase() %></div>
+            <div class="secImgs">
+                <img class="secImg" src="/images/categoriesImages/<%= c.image %>" />
+            </div>
+            <div class="secButtonFooter">
+                <div class="button featuredButton">
+                    <a href="/products/<%= c.slug %>">
+                        VIEW ALL
+                    </a>
+                </div>
+            </div>
+        </div>
+        <% } %>
+        <% }) %>
+    </div>
+</div>
+
+<%- include('_layouts/footer'); %>

@@ -1,0 +1,28 @@
+<%- include('_layouts/header'); %>
+
+<div id="ProductInfo" class="section">
+    <div class="ProductContainerBackground">
+        <div class="Left-side">
+            <div class="ProductImgWrap">
+                <img class="ProductImg" src="/product_images/<%= p.id %>/<%= p.image %>" />
+            </div>
+        </div>
+        <div class="Right-side">
+            <div class="ProductsInfoWrap">
+                <h6 class="ProductDetails">CATEGORY: <a style="color: #45A29E" href="/products/<%= p.category %>"><%= p.category %></a></h6>
+                <h1 class="ProductTitle"><%= p.title %></h1>
+                <div class="ProductParagraph"><%- p.desc %></div>
+                <div class="ProductPrice"><%= parseFloat(p.price).toLocaleString() %><img id="moneyLogo" src="/images/DU_money.svg" /></div>
+                <% if(loggedIn) { %>
+                <div class="ProdButt"><a href="/cart/add/<%=p.slug%>" class="button addToCartButton">ADD TO CART</a></div>
+                <% } else { %>
+                <div class="ProdButt"><a href="#" class="button addToCartButton">LOG IN TO BUY</a></div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <div class="ProductContainerImg">
+    </div>
+</div>
+
+<%- include('_layouts/footer'); %>

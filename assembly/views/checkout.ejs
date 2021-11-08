@@ -1,0 +1,121 @@
+<%- include('_layouts/header'); %>
+<% if(typeof cart !== "undefined") { %>
+
+
+
+
+
+
+
+
+<div class="myCartHero">
+
+    <div class="myCartBackground">
+        <div>
+            <h1 class="myCartTitle">SHOPPING CART</h1>
+        </div>
+        <div>
+            <h2 class="myCartSecondTitle">YOUR PRODUCTS</h2>
+        </div>
+        <div class="myCartBody">
+            <div class="myCartProducts">
+                <% let sum = 0; %>
+                <% cart.forEach(function (product) { %>
+                <% sum += product.price * product.quantity; %>
+                <div class="productContainerCart" id="<%= product.slug %>">
+                    <div class="productImageCart"><img src="/product_images/<%= product._id %>/<%= product.image %>" />
+                    </div>
+                    <div class="productBodyCart">
+                        <div class="productMainBodyCart">
+                            <div class="productDetailsCart">
+                                <div class="productTitleCart"><%= product.title %></div>
+                                <div class="productQuantityWrapCart">
+                                    <div class="productQuantityCart">
+                                        <div class="quantityButtonCart">
+                                            <div class="quantityTextCart">Qty: <%= product.quantity %></div>
+                                        </div>
+                                    </div>
+                                    <div class="AddSubtractButtonsCart">
+                                        <a href="/cart/update/<%= product.title %>?action=add#<%= product.slug %>"><i
+                                                class="fas fa-fw fa-plus"></i></a>
+                                        <a href="/cart/update/<%= product.title %>?action=remove#<%= product.slug %>"><i
+                                                class="fas fa-fw fa-minus"></i></a>
+                                    </div>
+                                    <div class="removeButtonWrapCart">
+                                        <a class="removeButtonCart"
+                                            href="/cart/update/<%= product.title %>?action=clear"><i
+                                                class="fas fa-fw fa-lg fa-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="productInfoCart"><%- product.desc %></div>
+                        </div>
+                        <div class="productBottomCart">
+                            <%= parseFloat(product.quantity*product.price).toLocaleString() %> <img class="duMoneyCart"
+                                src="/images/DU_money.svg" />
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+            <div class="myCartOrder">
+                <div class="myCartOrderBlock">
+                    <div class="cartOrderMain">
+                        <a class="button orderButtonCart">Place your order</a>
+                        <div class="orderDetailsCart">
+                            <div></div>
+                            <div class="shippingDetailsCart">
+                                <div>Shipping</div>
+                                <div>Free</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartOrderBottom">
+                        <span class="cartOrderBottomText">Subtotal: <%= parseFloat(sum).toLocaleString() %></span>
+                        <img class="duMoneyCart" src="/images/DU_money.svg" />
+                    </div>
+                </div>
+                <div class="myCartOrderMoreInfo paragraphCart">
+                    When we receive your order,
+                    we will contact you on Discord.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<% } else { %>
+<div class="myEmptyClassWrap">
+    <div class="myEmptyCartText">YOUR CART IS EMPTY</div>
+</div>
+<% } %>
+
+<script>
+
+    $(function () {
+        $('a.clearcart').on('click', function () {
+            if (!confirm('Confirm clear cart!'))
+                return false;
+        });
+
+
+        $('a.buynow').on('click', function (e) {
+            e.preventDefault();
+
+            $.get('/cart/buynow', function () {
+                $('form.pp input[type=image]').click();
+                $('.ajaxbg').show();
+
+            });
+
+
+        });
+
+
+    });
+
+</script>
+<!-- *** -->
+
+
+<%- include('_layouts/footer'); %>
